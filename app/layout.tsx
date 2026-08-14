@@ -31,8 +31,30 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Handpoke Travels",
-  description: "Ink stories. Mark souls. Handpoke tattoos around the world.",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  ),
+  title: {
+    default: "Handpoke Travels",
+    template: "%s · Handpoke Travels",
+  },
+  description:
+    "Ink stories. Mark souls. Handpoke tattoos around the world.",
+  applicationName: "Handpoke Travels",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Handpoke Travels",
+    title: "Handpoke Travels",
+    description:
+      "Ink stories. Mark souls. Handpoke tattoos around the world.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Handpoke Travels",
+    description:
+      "Ink stories. Mark souls. Handpoke tattoos around the world.",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
