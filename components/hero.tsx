@@ -165,7 +165,7 @@ export function Hero() {
 
             <a
               href="#destinations"
-              className="scroll-hint mt-auto flex items-start gap-3 pt-10 font-sans text-[11px] font-normal tracking-[0.32em] uppercase text-[#4a4238] transition-colors hover:text-ink"
+              className="scroll-hint mt-auto mb-8 flex items-start gap-3 pt-6 font-sans text-[11px] font-normal tracking-[0.32em] uppercase text-[#4a4238] transition-colors hover:text-ink lg:mb-12"
             >
               <span>
                 <span className="block">Scroll to begin</span>
@@ -181,7 +181,7 @@ export function Hero() {
         </div>
 
         <ol
-          className="section-dots hidden shrink-0 flex-col items-center justify-center gap-3 pr-4 md:flex"
+          className="section-dots mb-8 hidden shrink-0 flex-col items-center gap-3 self-end pr-5 md:flex lg:mb-12"
           aria-hidden="true"
         >
           <li className="size-[9px] rounded-full bg-terracotta" />

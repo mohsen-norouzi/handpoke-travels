@@ -11,7 +11,7 @@ const NAV = [
 
 export function Header() {
   return (
-    <header className="nav-bar flex flex-wrap items-center justify-between gap-y-3 py-5 pr-8 pl-6 lg:pt-7 lg:pr-10 lg:pl-10">
+    <header className="nav-bar flex flex-wrap items-center justify-between gap-y-3 pt-3 pb-3 pr-8 pl-6 lg:pt-4 lg:pr-10 lg:pl-10">
       <Link
         href="/"
         className="nav-brand flex items-center gap-3 text-ink"
@@ -38,7 +38,7 @@ export function Header() {
           <Link
             key={item.href}
             href={item.href}
-            className="nav-item font-serif text-[10px] font-medium tracking-[0.28em] uppercase text-ink/80 transition-colors hover:text-ink md:text-[11px]"
+            className="nav-item font-serif text-[13px] font-semibold tracking-[0.2em] uppercase text-ink transition-colors hover:text-terracotta md:text-[14px]"
           >
             {item.label}
           </Link>
@@ -47,9 +47,9 @@ export function Header() {
 
       <Link
         href="#book"
-        className="nav-cta group flex items-center gap-3 font-serif text-[10px] font-medium tracking-[0.26em] uppercase text-ink md:text-[11px]"
+        className="nav-cta group flex items-center gap-3 font-serif text-[13px] font-semibold tracking-[0.2em] uppercase text-ink md:text-[14px]"
       >
-        <span className="underline decoration-1 underline-offset-4 transition-colors group-hover:decoration-transparent">
+        <span className="underline decoration-1 underline-offset-[5px] transition-colors group-hover:decoration-transparent">
           Book your experience
         </span>
         <Image

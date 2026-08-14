@@ -101,11 +101,11 @@ body {
 
 .hero-kicker {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-weight: 300;
-  font-size: 0.6875rem;
-  letter-spacing: 0.34em;
+  font-weight: 400;
+  font-size: 0.8125rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #b0745a;
+  color: #7c4634;
   line-height: 1.75;
 }
 
