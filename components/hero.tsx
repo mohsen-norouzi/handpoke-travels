@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { BohoCursor } from "./boho-cursor";
 import { CircularCta } from "./circular-cta";
 import { Header } from "./header";
 import { HeroCollage } from "./hero-collage";
@@ -191,6 +192,7 @@ export function Hero() {
         </ol>
       </div>
       </div>
+      <BohoCursor />
     </section>
   );
 }

@@ -18,7 +18,7 @@ export function HeroCollage() {
         />
       </div>
 
-      <div className="circle-stage col-start-1 row-start-1 ml-[-25.5%] mt-[-2.5%] aspect-square w-[105.5%] min-h-0">
+      <div className="circle-stage col-start-1 row-start-1 ml-[-25.5%] mt-[-2.5%] aspect-square w-[105.5%] min-h-0" data-cursor-lens>
         <div className="circle-stamp circle-frame grid size-full rotate-[16deg]">
           <div className="circle-photo col-start-1 row-start-1 mt-[0.5%] ml-[6%] h-[110%] w-[110%] place-self-center overflow-hidden">
             <Image
@@ -43,7 +43,7 @@ export function HeroCollage() {
         />
       </div>
 
-      <div className="polaroid parallax-fast col-start-1 row-start-1 mr-[8.5%] mt-[20.5%] ml-auto w-[87.5%] max-w-[211px] min-h-0">
+      <div className="polaroid parallax-fast col-start-1 row-start-1 mr-[8.5%] mt-[20.5%] ml-auto w-[87.5%] max-w-[211px] min-h-0" data-cursor-lens>
         <Image
           src="/images/polaroid.png"
           alt="Misty mountain range in a vintage polaroid frame"
