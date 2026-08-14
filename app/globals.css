@@ -46,6 +46,12 @@ body {
   opacity: 0;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .hero-root:not(.hero-live) .hero-stage {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-bg {
     opacity: 1;
@@ -126,6 +132,11 @@ body {
   clip-path: polygon(0 0, 100% 42%, 100% 58%, 0 100%);
 }
 
+.boho-cursor {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .boho-cursor-disc {
   border-radius: 47% 53% 50% 50% / 49% 46% 54% 51%;
   box-shadow:
@@ -138,17 +149,4 @@ body {
 .boho-cursor-on [data-cursor-lens],
 .boho-cursor-on [data-cursor-lens] * {
   cursor: none;
-}
-
-.hero-rule-line {
-  height: 2px;
-  width: min(14rem, 38vw);
-  background: linear-gradient(
-    to right,
-    #b0745a 0%,
-    #b0745a 18%,
-    color-mix(in srgb, #b0745a 40%, transparent) 62%,
-    transparent 100%
-  );
-  clip-path: polygon(0 0, 100% 42%, 100% 58%, 0 100%);
 }

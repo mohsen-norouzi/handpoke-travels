@@ -28,7 +28,7 @@ export function BohoCursor() {
       x: window.innerWidth / 2,
       y: window.innerHeight / 2,
       scale: 0.4,
-      opacity: 0,
+      autoAlpha: 0,
     });
 
     const xTo = gsap.quickTo(el, "x", { duration: 0.55, ease: "power3.out" });
@@ -41,7 +41,7 @@ export function BohoCursor() {
       document.documentElement.classList.add("boho-cursor-on");
       gsap.to(el, {
         scale: 1,
-        opacity: 1,
+        autoAlpha: 1,
         duration: 0.45,
         ease: "power3.out",
         overwrite: "auto",
@@ -53,7 +53,7 @@ export function BohoCursor() {
       document.documentElement.classList.remove("boho-cursor-on");
       gsap.to(el, {
         scale: 0.4,
-        opacity: 0,
+        autoAlpha: 0,
         duration: 0.32,
         ease: "power2.inOut",
         overwrite: "auto",
@@ -82,7 +82,7 @@ export function BohoCursor() {
   return (
     <div
       ref={lens}
-      className="boho-cursor pointer-events-none fixed top-0 left-0 z-50 hidden size-[min(42vw,12.5rem)] will-change-transform [@media(pointer:fine)]:block"
+      className="boho-cursor pointer-events-none invisible fixed top-0 left-0 z-50 size-[min(42vw,12.5rem)] opacity-0 will-change-transform"
       aria-hidden="true"
     >
       <div className="boho-cursor-disc relative size-full overflow-hidden">

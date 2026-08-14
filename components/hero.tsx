@@ -17,59 +17,81 @@ export function Hero() {
 
   useGSAP(
     () => {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const rootEl = root.current;
+      if (!rootEl) {
         return;
       }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        rootEl.classList.add("hero-live");
+        return;
+      }
+
+      gsap.set(".nav-brand, .nav-item, .nav-cta", { y: -18, opacity: 0 });
+      gsap.set(".hero-eyebrow", { y: 16, opacity: 0 });
+      gsap.set(".hero-line-inner, .hero-script", { y: 28, opacity: 0 });
+      gsap.set(".hero-rule", { y: 12, opacity: 0 });
+      gsap.set(".terracotta, .circle-stage", { scale: 0.84, opacity: 0 });
+      gsap.set(".circle-photo-img", { scale: 1.32 });
+      gsap.set(".polaroid", { y: 28, opacity: 0 });
+      gsap.set(".torn-note", { y: -20, opacity: 0 });
+      gsap.set(".parallax-slow, .star", { opacity: 0 });
+      gsap.set(".circular-cta, .section-dots", { y: 16, opacity: 0 });
+      gsap.set(".scroll-hint", { opacity: 0 });
+      gsap.set(".rail-top, .rail-mid", { scaleY: 0 });
+      gsap.set(".rail-dot, .rail-star", { scale: 0, opacity: 0 });
+      rootEl.classList.add("hero-live");
 
       const tl = gsap.timeline({
         defaults: { ease: "power3.out" },
       });
 
       tl.to(".hero-bg", { opacity: 1, duration: 1.35, ease: "power2.out" }, 0)
-        .from(".nav-brand, .nav-item, .nav-cta", {
-        y: -18,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.05,
-      })
-        .from(".hero-eyebrow", { y: 16, opacity: 0, duration: 0.7 }, "-=0.45")
-        .from(
+        .to(".nav-brand, .nav-item, .nav-cta", {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.05,
+        })
+        .to(".hero-eyebrow", { y: 0, opacity: 1, duration: 0.7 }, "-=0.45")
+        .to(
           ".hero-line-inner, .hero-script",
-          { y: 28, opacity: 0, duration: 0.9, stagger: 0.1 },
+          { y: 0, opacity: 1, duration: 0.9, stagger: 0.1 },
           "-=0.45",
         )
-        .from(".hero-rule", { opacity: 0, y: 12, duration: 0.6 }, "-=0.55")
-        .from(
+        .to(".hero-rule", { opacity: 1, y: 0, duration: 0.6 }, "-=0.55")
+        .to(
           ".terracotta, .circle-stage",
-          { scale: 0.84, opacity: 0, duration: 1.15, ease: "power2.inOut" },
+          { scale: 1, opacity: 1, duration: 1.15, ease: "power2.inOut" },
           "-=1.1",
         )
-        .from(
+        .to(
           ".circle-photo-img",
-          { scale: 1.32, duration: 1.7, ease: "power2.out" },
+          { scale: 1.1, duration: 1.7, ease: "power2.out" },
           "-=1.15",
         )
-        .from(".polaroid", { y: 28, opacity: 0, duration: 0.95 }, "-=1.2")
-        .from(".torn-note", { y: -20, opacity: 0, duration: 0.95 }, "-=0.85")
-        .from(
+        .to(".polaroid", { y: 0, opacity: 1, duration: 0.95 }, "-=1.2")
+        .to(".torn-note", { y: 0, opacity: 1, duration: 0.95 }, "-=0.85")
+        .to(
           ".parallax-slow, .star",
-          { opacity: 0, duration: 0.8, stagger: 0.04 },
+          { opacity: 1, duration: 0.8, stagger: 0.04 },
           "-=0.8",
         )
-        .from(
+        .to(
           ".circular-cta, .section-dots",
-          { opacity: 0, y: 16, duration: 0.7, stagger: 0.08 },
+          { opacity: 1, y: 0, duration: 0.7, stagger: 0.08 },
           "-=0.6",
         )
-        .from(".scroll-hint", { opacity: 0, duration: 0.7 }, "-=0.55")
-        .from(
+        .to(".scroll-hint", { opacity: 1, duration: 0.7 }, "-=0.55")
+        .fromTo(
           ".rail-top, .rail-mid",
-          { scaleY: 0, duration: 1.05, stagger: 0.08, ease: "power2.inOut" },
+          { scaleY: 0 },
+          { scaleY: 1, duration: 1.05, stagger: 0.08, ease: "power2.inOut" },
           0.2,
         )
-        .from(
+        .to(
           ".rail-dot, .rail-star",
-          { scale: 0, opacity: 0, duration: 0.4, stagger: 0.14, ease: "back.out(1.8)" },
+          { scale: 1, opacity: 1, duration: 0.4, stagger: 0.14, ease: "back.out(1.8)" },
           0.7,
         );
 
@@ -114,6 +136,10 @@ export function Hero() {
         window.addEventListener("mousemove", onMove);
         return () => window.removeEventListener("mousemove", onMove);
       });
+
+      return () => {
+        rootEl.classList.remove("hero-live");
+      };
     },
     { scope: root },
   );
@@ -125,7 +151,7 @@ export function Hero() {
     >
       <div className="hero-bg col-start-1 row-start-1 min-h-0" aria-hidden="true" />
 
-      <div className="col-start-1 row-start-1 flex min-h-0 flex-col">
+      <div className="hero-stage col-start-1 row-start-1 flex min-h-0 flex-col">
       <Header />
 
       <div className="flex min-h-0 flex-1">
