@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { TerracottaDrop } from "./icons";
+import { SparkleStar, TerracottaDrop } from "./icons";
 
 export function HeroCollage() {
   return (
@@ -56,28 +56,33 @@ export function HeroCollage() {
       </div>
 
       <div className="torn-note parallax-fast col-start-1 row-start-1 mb-[13%] ml-[34%] mt-auto w-[34.5%] max-w-[280px] min-h-0">
-        <div className="grid rotate-[-3.5deg]">
+        <div className="isolate grid rotate-[-3.5deg] drop-shadow-[0_12px_20px_rgba(40,24,10,0.12)]">
           <Image
             src="/images/paper.png"
             alt=""
             width={962}
             height={1163}
-            className="col-start-1 row-start-1 h-auto w-full drop-shadow-[0_12px_20px_rgba(40,24,10,0.12)]"
+            className="z-0 col-start-1 row-start-1 h-auto w-full"
           />
-          <div className="col-start-1 row-start-1 flex flex-col p-[22%_16%_18%_20%]">
-            <p className="font-sans text-[11px] leading-relaxed tracking-[0.14em] text-ink/85 uppercase md:text-[12px]">
-              Timeless by nature.
+          <div className="z-10 col-start-1 row-start-1 flex size-full flex-col items-center px-[16%] pt-[22%]">
+            <p className="text-center font-sans text-[11px] leading-[1.95] font-light tracking-[0.22em] text-ink uppercase md:text-[12px]">
+              Timeless
               <br />
-              Etched by hand.
+              by nature.
+              <br />
+              Etched
+              <br />
+              by hand.
             </p>
-            <Image
-              src="/images/stamp.png"
-              alt="Handpoke Travels stamp"
-              width={1137}
-              height={695}
-              className="mt-auto h-auto w-[50.5%]"
-            />
+            <SparkleStar className="mt-5 size-[10px] text-terracotta" />
           </div>
+          <Image
+            src="/images/stamp.png"
+            alt="Handpoke Travels stamp"
+            width={1137}
+            height={695}
+            className="z-20 col-start-1 row-start-1 mt-[66.5%] ml-[49.5%] h-auto w-[78%]"
+          />
         </div>
       </div>
     </div>

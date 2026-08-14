@@ -16,7 +16,7 @@
   --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
   --font-display: var(--font-bodoni), ui-serif, Georgia, serif;
-  --font-script: var(--font-italianno), cursive;
+  --font-script: var(--font-juliette), cursive;
 }
 
 html,
@@ -90,7 +90,9 @@ body {
 .hero-script {
   font-family: var(--font-script), cursive;
   font-weight: 400;
-  font-size: clamp(1.85rem, min(3.6vw, 6vh), 3.15rem);
+  font-size: 5.25rem;
+  letter-spacing: 0;
+  word-spacing: 0.8em;
   line-height: 1;
   color: #b0745a;
   font-style: normal;

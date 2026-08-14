@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FourPointStar } from "./icons";
 
 const NAV = [
   { href: "#about", label: "About" },
@@ -21,9 +20,9 @@ export function Header() {
         <Image
           src="/images/logo.png"
           alt=""
-          width={32}
-          height={31}
-          className="size-[26px] object-contain"
+          width={845}
+          height={827}
+          className="h-12 w-auto object-contain md:h-14"
         />
         <span className="font-serif text-[11px] font-medium tracking-[0.34em] uppercase">
           Handpoke Travels
@@ -52,7 +51,13 @@ export function Header() {
         <span className="underline decoration-1 underline-offset-4 transition-colors group-hover:decoration-transparent">
           Book your experience
         </span>
-        <FourPointStar className="size-[11px] transition-transform duration-500 group-hover:rotate-45" />
+        <Image
+          src="/images/compass-brown.png"
+          alt=""
+          width={849}
+          height={907}
+          className="h-4 w-auto object-contain transition-transform duration-500 group-hover:rotate-45"
+        />
       </Link>
     </header>
   );

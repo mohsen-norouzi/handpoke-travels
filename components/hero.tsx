@@ -143,7 +143,7 @@ export function Hero() {
 
             <h1 className="mt-5 flex flex-col gap-1">
               <span className="hero-line-inner hero-display">Tattoos</span>
-              <span className="hero-script">that travel</span>
+              <span className="hero-script pl-5">that travel</span>
               <span className="hero-line-inner hero-display">with you</span>
             </h1>
 

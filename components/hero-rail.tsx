@@ -13,11 +13,11 @@ export function HeroRail() {
       <span className="rail-mid origin-top block w-px flex-1" />
       <span className="h-3.5 shrink-0" />
       <Image
-        src="/images/compass.png"
+        src="/images/compass-brown.png"
         alt=""
-        width={22}
-        height={24}
-        className="rail-star h-auto w-[13px] shrink-0"
+        width={849}
+        height={907}
+        className="rail-star h-auto w-[18px] shrink-0"
       />
     </aside>
   );

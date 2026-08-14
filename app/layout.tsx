@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Cormorant_Garamond, Italianno, Jost } from "next/font/google";
+import { Bodoni_Moda, Cormorant_Garamond, Jost } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const bodoni = Bodoni_Moda({
@@ -16,10 +17,9 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
-const italianno = Italianno({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-italianno",
+const juliette = localFont({
+  src: "./fonts/Juliette.otf",
+  variable: "--font-juliette",
   display: "swap",
 });
 
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodoni.variable} ${cormorant.variable} ${italianno.variable} ${jost.variable} h-full scroll-smooth antialiased`}
+      className={`${bodoni.variable} ${cormorant.variable} ${juliette.variable} ${jost.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-cream text-ink">{children}</body>
     </html>

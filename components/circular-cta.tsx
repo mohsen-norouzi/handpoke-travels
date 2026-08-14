@@ -32,11 +32,11 @@ export function CircularCta() {
         </text>
       </svg>
       <Image
-        src="/images/logo.png"
+        src="/images/compass.png"
         alt=""
-        width={28}
-        height={27}
-        className="col-start-1 row-start-1 size-5 object-contain transition-transform duration-700 group-hover:rotate-45 md:size-6"
+        width={849}
+        height={907}
+        className="col-start-1 row-start-1 h-14 w-auto object-contain transition-transform duration-700 group-hover:rotate-45 md:h-16"
       />
     </a>
   );
