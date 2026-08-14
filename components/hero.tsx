@@ -147,45 +147,50 @@ export function Hero() {
       <FourPointStar className="star pointer-events-none absolute left-[22%] top-[22%] z-10 hidden size-2.5 text-ink/40 lg:block" />
       <FourPointStar className="star pointer-events-none absolute bottom-[18%] left-[38%] z-10 hidden size-2 text-ink/35 lg:block" />
 
-      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 py-2 pr-[4vw] pb-8 pl-10 lg:grid-cols-[minmax(280px,0.88fr)_1.22fr] lg:gap-0 lg:pt-0 lg:pr-[3.5vw] lg:pb-10 lg:pl-14">
-        <div className="hero-copy relative z-20 max-w-[580px] pt-4 lg:pt-0">
-          <p className="hero-eyebrow flex items-center gap-2.5 font-serif text-[11px] tracking-[0.32em] uppercase text-ink/75">
-            Ink stories. Mark souls.
-            <FourPointStar className="size-2.5 text-ink/60" />
-          </p>
+      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 py-2 pr-8 pb-8 pl-16 lg:grid-cols-[1fr_1.05fr] lg:gap-12 lg:pt-0 lg:pr-12 lg:pb-10 lg:pl-[4.5rem] xl:gap-16">
+        <div className="hero-copy relative z-20 pt-4 lg:pt-0">
+          <div className="hero-eyebrow flex items-center gap-3">
+            <p className="hero-kicker">
+              Ink stories.
+              <br />
+              Mark souls.
+            </p>
+            <FourPointStar className="size-2.5 shrink-0 text-clay" />
+          </div>
 
           <h1 className="relative mt-5 w-max">
-            <span className="hero-line block overflow-hidden leading-[0.82]">
-              <span className="hero-line-inner block font-display text-[clamp(3.5rem,9.2vw,8.25rem)] font-semibold tracking-[-0.038em] uppercase">
-                Tattoos
-              </span>
+            <span className="hero-line block overflow-hidden">
+              <span className="hero-line-inner hero-display block">Tattoos</span>
             </span>
-            <span className="pointer-events-none absolute left-1/2 top-[49%] z-1 -translate-x-1/2 -translate-y-1/2">
-              <span className="hero-script block font-script text-[clamp(2.6rem,7vw,6.2rem)] leading-none text-ink/90">
+            <span className="pointer-events-none absolute top-[22%] left-[22%] z-1">
+              <span className="hero-script block whitespace-nowrap">
                 that travel
               </span>
             </span>
-            <span className="hero-line mt-[0.04em] block overflow-hidden leading-[0.82]">
-              <span className="hero-line-inner block font-display text-[clamp(3.5rem,9.2vw,8.25rem)] font-semibold tracking-[-0.038em] uppercase">
+            <span className="hero-line mt-[0.18em] block overflow-hidden">
+              <span className="hero-line-inner hero-display block">
                 with you
               </span>
             </span>
           </h1>
 
-          <p className="hero-rule mt-7 flex flex-wrap items-center gap-3 font-serif text-[10px] tracking-[0.34em] uppercase text-ink/70 md:mt-8 md:text-[11px]">
-            <span className="h-px w-7 bg-ink/35" />
-            Handpoke tattoos around the world
-            <span className="flex items-center gap-2">
-              <span className="h-px w-8 bg-ink/35" />
-              <FourPointStar className="size-2 text-ink/55" />
-            </span>
-          </p>
+          <div className="hero-rule mt-7">
+            <p className="hero-kicker hero-kicker-ink">
+              Handpoke tattoos
+              <br />
+              around the world
+            </p>
+            <div className="mt-2.5 flex items-center gap-2.5">
+              <span className="hero-rule-line" />
+              <FourPointStar className="size-2 shrink-0 text-clay" />
+            </div>
+          </div>
 
-          <div className="mt-10 flex items-end gap-8 md:mt-14">
+          <div className="mt-10 flex items-end gap-8 md:mt-12">
             <CircularCta />
             <a
               href="#destinations"
-              className="scroll-hint mb-3 flex items-center gap-3 font-serif text-[10px] tracking-[0.3em] uppercase text-ink/70 transition-colors hover:text-ink"
+              className="scroll-hint mb-3 flex items-center gap-3 font-sans text-[10px] tracking-[0.3em] uppercase text-clay transition-colors hover:text-ink"
             >
               Scroll to begin
               <CrescentMoon className="size-[15px]" />
@@ -193,7 +198,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="h-full min-h-[min(78vh,720px)] lg:-ml-8 xl:-ml-16">
+        <div className="h-full min-h-[min(70vh,640px)]">
           <HeroCollage />
         </div>
       </div>

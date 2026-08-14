@@ -1,24 +1,32 @@
 import type { Metadata } from "next";
-import { Bodoni_Moda, Cormorant_Garamond, Great_Vibes } from "next/font/google";
+import { Bodoni_Moda, Cormorant_Garamond, Italianno, Jost } from "next/font/google";
 import "./globals.css";
 
 const bodoni = Bodoni_Moda({
   subsets: ["latin"],
+  weight: "400",
   variable: "--font-bodoni",
   display: "swap",
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   variable: "--font-cormorant",
   display: "swap",
 });
 
-const greatVibes = Great_Vibes({
+const italianno = Italianno({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-great-vibes",
+  variable: "--font-italianno",
+  display: "swap",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-jost",
   display: "swap",
 });
 
@@ -31,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodoni.variable} ${cormorant.variable} ${greatVibes.variable} h-full scroll-smooth antialiased`}
+      className={`${bodoni.variable} ${cormorant.variable} ${italianno.variable} ${jost.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-cream text-ink">{children}</body>
     </html>

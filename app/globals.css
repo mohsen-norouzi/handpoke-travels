@@ -2,20 +2,21 @@
 
 :root {
   --background: #e6d4c3;
-  --foreground: #1c1612;
+  --foreground: #111111;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-cream: #e6d4c3;
-  --color-ink: #1c1612;
-  --color-terracotta: #c45c3a;
+  --color-ink: #1a1a1a;
+  --color-clay: #b0745a;
+  --color-terracotta: #b0745a;
   --color-paper: #d9c4aa;
-  --font-sans: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-sans: var(--font-jost), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
   --font-display: var(--font-bodoni), ui-serif, Georgia, serif;
-  --font-script: var(--font-great-vibes), cursive;
+  --font-script: var(--font-italianno), cursive;
 }
 
 html,
@@ -146,4 +147,46 @@ body {
 
 .circle-photo {
   box-shadow: inset 0 0 40px rgba(20, 12, 6, 0.28);
+}
+
+.hero-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: clamp(2.8rem, 6.4vw, 5.75rem);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-script {
+  font-family: var(--font-script), cursive;
+  font-weight: 400;
+  font-size: clamp(1.85rem, 3.6vw, 3.15rem);
+  line-height: 0.8;
+  color: #b0745a;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.hero-kicker {
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300;
+  font-size: 0.6875rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: #b0745a;
+  line-height: 1.75;
+}
+
+.hero-kicker-ink {
+  color: #1a1a1a;
+}
+
+.hero-rule-line {
+  height: 1px;
+  width: 5.5rem;
+  background: linear-gradient(to right, #b0745a, #b0745a 55%, transparent);
 }
