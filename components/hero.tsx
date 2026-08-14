@@ -131,7 +131,7 @@ export function Hero() {
         <HeroRail />
 
         <div className="grid min-h-0 flex-1 grid-cols-1 items-stretch gap-8 px-6 py-4 pb-8 md:grid-cols-[1fr_1.05fr] md:gap-10 lg:gap-12 lg:px-10 lg:py-0 xl:gap-16">
-          <div className="hero-copy flex h-full min-h-0 flex-col pt-4 lg:pt-6 lg:pb-6">
+          <div className="hero-copy relative z-10 flex h-full min-h-0 flex-col pt-4 lg:pt-6 lg:pb-6">
             <div className="hero-eyebrow flex items-center gap-3">
               <p className="hero-kicker">
                 Ink stories.

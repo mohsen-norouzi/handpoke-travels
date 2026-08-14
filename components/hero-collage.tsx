@@ -4,8 +4,18 @@ import { SparkleStar, TerracottaDrop } from "./icons";
 export function HeroCollage() {
   return (
     <div className="hero-collage grid h-full min-h-0 w-full grid-cols-1 grid-rows-1">
-      <div className="terracotta parallax-med pointer-events-none col-start-1 row-start-1 ml-[6%] mt-[10%] h-[28%] w-[22%] rotate-[-18deg] text-terracotta">
+      <div className="terracotta parallax-med pointer-events-none col-start-1 row-start-1 ml-[-25%] mt-[0%] h-[28%] w-[22%] rotate-[-18deg] opacity-[0.62] text-terracotta">
         <TerracottaDrop className="size-full" />
+      </div>
+
+      <div className="parallax-slow pointer-events-none col-start-1 row-start-1 mt-[62.5%] ml-[-62.5%] w-[34%] min-h-0 rotate-[-18.5deg] opacity-[0.72] mix-blend-multiply">
+        <Image
+          src="/images/artline.png"
+          alt=""
+          width={1122}
+          height={1402}
+          className="h-auto w-full"
+        />
       </div>
 
       <div className="circle-stage col-start-1 row-start-1 ml-[-25.5%] mt-[-2.5%] aspect-square w-[105.5%] min-h-0">
@@ -34,25 +44,15 @@ export function HeroCollage() {
       </div>
 
       <div className="polaroid parallax-fast col-start-1 row-start-1 mr-[8.5%] mt-[20.5%] ml-auto w-[87.5%] max-w-[211px] min-h-0">
-        <div className="grid rotate-[19.5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]">
-          <div className="col-start-1 row-start-1 px-[6%] pt-[10%] pb-[9%]">
-            <Image
-              src="/images/hero-landscape.jpg"
-              alt="Misty mountain range in warm vintage tones"
-              width={600}
-              height={800}
-              priority
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <Image
-            src="/images/frame.png"
-            alt=""
-            width={906}
-            height={1268}
-            className="pointer-events-none col-start-1 row-start-1 h-auto w-full"
-          />
-        </div>
+        <Image
+          src="/images/polaroid.png"
+          alt="Misty mountain range in a vintage polaroid frame"
+          width={903}
+          height={1259}
+          priority
+          unoptimized
+          className="h-auto w-full rotate-[19.5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]"
+        />
       </div>
 
       <div className="torn-note parallax-fast col-start-1 row-start-1 mb-[13%] ml-[34%] mt-auto w-[34.5%] max-w-[280px] min-h-0">
