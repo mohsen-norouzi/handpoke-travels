@@ -36,6 +36,7 @@ export function CircularCta() {
         alt=""
         width={849}
         height={907}
+        loading="eager"
         className="col-start-1 row-start-1 h-14 w-auto object-contain transition-transform duration-700 group-hover:rotate-45 md:h-16"
       />
     </a>

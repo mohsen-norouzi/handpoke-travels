@@ -14,6 +14,7 @@ export function HeroCollage() {
           alt=""
           width={1122}
           height={1402}
+          loading="eager"
           className="h-auto w-full"
         />
       </div>
@@ -26,7 +27,8 @@ export function HeroCollage() {
               alt="A handpoke tattoo of a botanical branch being inked onto skin"
               width={1024}
               height={1024}
-              priority
+              loading="eager"
+              fetchPriority="high"
               className="circle-photo-img size-full object-cover object-[center_42%] scale-110"
             />
           </div>
@@ -39,6 +41,7 @@ export function HeroCollage() {
           alt=""
           width={565}
           height={1627}
+          loading="eager"
           className="h-full w-full object-contain object-top-right brightness-0 opacity-55"
         />
       </div>
@@ -49,7 +52,7 @@ export function HeroCollage() {
           alt="Misty mountain range in a vintage polaroid frame"
           width={903}
           height={1259}
-          priority
+          loading="eager"
           unoptimized
           className="h-auto w-full rotate-[19.5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]"
         />
@@ -62,6 +65,7 @@ export function HeroCollage() {
             alt=""
             width={962}
             height={1163}
+            loading="eager"
             className="z-0 col-start-1 row-start-1 h-auto w-full"
           />
           <div className="z-10 col-start-1 row-start-1 flex size-full flex-col items-center px-[16%] pt-[22%]">
@@ -81,6 +85,7 @@ export function HeroCollage() {
             alt="Handpoke Travels stamp"
             width={1137}
             height={695}
+            loading="eager"
             className="z-20 col-start-1 row-start-1 mt-[66.5%] ml-[49.5%] h-auto w-[78%]"
           />
         </div>

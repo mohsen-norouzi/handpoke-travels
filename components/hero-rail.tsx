@@ -17,6 +17,7 @@ export function HeroRail() {
         alt=""
         width={849}
         height={907}
+        loading="eager"
         className="rail-star h-auto w-[18px] shrink-0"
       />
     </aside>
