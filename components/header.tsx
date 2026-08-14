@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { FourPointStar, SunEyeLogo } from "./icons";
+import { FourPointStar } from "./icons";
 
 const NAV = [
   { href: "#about", label: "About" },
@@ -17,7 +18,13 @@ export function Header() {
         className="nav-brand flex items-center gap-2.5 text-ink"
         aria-label="Handpoke Travels home"
       >
-        <SunEyeLogo className="size-[26px] shrink-0" />
+        <Image
+          src="/images/logo.png"
+          alt=""
+          width={32}
+          height={31}
+          className="size-[26px] object-contain"
+        />
         <span className="font-serif text-[11px] font-medium tracking-[0.34em] uppercase">
           Handpoke Travels
         </span>

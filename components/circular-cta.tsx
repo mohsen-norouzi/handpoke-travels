@@ -1,4 +1,4 @@
-import { FourPointStar } from "./icons";
+import Image from "next/image";
 
 export function CircularCta() {
   const label = "DISCOVER THE JOURNEY • DISCOVER THE JOURNEY • ";
@@ -31,7 +31,13 @@ export function CircularCta() {
           <textPath href="#discover-circle">{label}</textPath>
         </text>
       </svg>
-      <FourPointStar className="size-4 transition-transform duration-700 group-hover:rotate-45 md:size-[18px]" />
+      <Image
+        src="/images/logo.png"
+        alt=""
+        width={28}
+        height={27}
+        className="size-5 object-contain transition-transform duration-700 group-hover:rotate-45 md:size-6"
+      />
     </a>
   );
 }

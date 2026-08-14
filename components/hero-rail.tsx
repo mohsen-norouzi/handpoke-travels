@@ -1,4 +1,4 @@
-import { SparkleStar } from "./icons";
+import Image from "next/image";
 
 export function HeroRail() {
   return (
@@ -12,7 +12,13 @@ export function HeroRail() {
       <span className="h-3.5 shrink-0" />
       <span className="rail-mid origin-top block w-px flex-1" />
       <span className="h-3.5 shrink-0" />
-      <SparkleStar className="rail-star size-[11px] shrink-0 text-ink" />
+      <Image
+        src="/images/compass.png"
+        alt=""
+        width={22}
+        height={24}
+        className="rail-star h-auto w-[13px] shrink-0"
+      />
     </aside>
   );
 }

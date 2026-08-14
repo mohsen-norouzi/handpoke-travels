@@ -59,17 +59,19 @@ export function SunEyeLogo({ className }: { className?: string }) {
   );
 }
 
-export function CrescentMoon({ className }: { className?: string }) {
+export function ScrollMouse({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 22"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.3"
+      strokeWidth="1.2"
+      strokeLinecap="round"
       aria-hidden="true"
       className={className}
     >
-      <path d="M16.2 4.4A8.2 8.2 0 1 0 19.6 16.4 6.6 6.6 0 0 1 16.2 4.4Z" />
+      <line x1="8" y1="0.6" x2="8" y2="4.2" />
+      <path d="M3.2 8.2 C3.2 5.6 5.35 4.4 8 4.4 C10.65 4.4 12.8 5.6 12.8 8.2 C12.8 13.4 10.6 18.8 8 21 C5.4 18.8 3.2 13.4 3.2 8.2 Z" />
     </svg>
   );
 }

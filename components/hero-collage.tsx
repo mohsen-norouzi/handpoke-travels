@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BotanicalArt, FourPointStar, RoughCircleFrame, SunEyeLogo } from "./icons";
+import { FourPointStar, RoughCircleFrame } from "./icons";
 
 export function HeroCollage() {
   return (
@@ -23,45 +23,70 @@ export function HeroCollage() {
         <RoughCircleFrame className="circle-frame pointer-events-none absolute -inset-[3.2%] text-ink" />
       </div>
 
-      <div className="polaroid parallax-fast absolute right-[3%] top-[15%] z-20 w-[36%] max-w-[210px] md:right-[6%] md:top-[17%] md:w-[200px] lg:right-[7%]">
-        <div className="relative rotate-[5.5deg] bg-[#f3ebe1] p-[7px] pb-9 shadow-[0_18px_40px_rgba(40,24,10,0.16)]">
-          <div className="tape tape-left" />
-          <div className="tape tape-right" />
-          <div className="relative aspect-[3/4] overflow-hidden bg-[#cbb9a4]">
+      <div className="parallax-slow pointer-events-none absolute right-[-4%] top-[2%] z-[5] w-[42%] md:right-[-1%] md:top-[0%] md:w-[230px] lg:w-[32%]">
+        <Image
+          src="/images/flower.png"
+          alt=""
+          width={565}
+          height={1627}
+          className="h-auto w-full brightness-0 opacity-55"
+        />
+      </div>
+
+      <div className="polaroid parallax-fast absolute right-[2%] top-[14%] z-20 w-[40%] max-w-[230px] md:right-[5%] md:top-[16%] md:w-[220px] lg:right-[6%]">
+        <div className="relative aspect-[906/1268] rotate-[5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]">
+          <div className="absolute inset-[10%_6.2%_8.8%_5.6%] overflow-hidden bg-[#cbb9a4]">
             <Image
               src="/images/hero-landscape.jpg"
               alt="Misty mountain range in warm vintage tones"
               fill
-              sizes="210px"
+              sizes="230px"
               className="object-cover"
+            />
+          </div>
+          <Image
+            src="/images/frame.png"
+            alt=""
+            fill
+            sizes="230px"
+            className="pointer-events-none object-contain"
+          />
+        </div>
+      </div>
+
+      <div className="torn-note parallax-fast absolute bottom-[4%] left-[12%] z-20 w-[54%] max-w-[300px] md:left-[16%] md:w-[280px]">
+        <div className="relative -rotate-[3.5deg]">
+          <Image
+            src="/images/paper.png"
+            alt=""
+            width={962}
+            height={1163}
+            className="h-auto w-full drop-shadow-[0_12px_20px_rgba(40,24,10,0.12)]"
+          />
+          <div className="absolute inset-[22%_16%_18%_20%] flex flex-col">
+            <p className="font-sans text-[11px] leading-relaxed tracking-[0.14em] text-ink/85 uppercase md:text-[12px]">
+              Timeless by nature.
+              <br />
+              Etched by hand.
+            </p>
+            <Image
+              src="/images/stamp.png"
+              alt="Handpoke Travels stamp"
+              width={1137}
+              height={695}
+              className="mt-auto w-[88%] h-auto"
             />
           </div>
         </div>
       </div>
 
-      <div className="parallax-slow pointer-events-none absolute right-[-2%] top-[6%] z-[5] w-[40%] text-ink/50 md:right-[0%] md:top-[4%] md:w-[210px] lg:w-[30%]">
-        <BotanicalArt className="h-auto w-full" />
-      </div>
-
-      <div className="torn-note parallax-fast absolute bottom-[6%] left-[16%] z-20 w-[50%] max-w-[280px] md:left-[20%] md:w-[260px]">
-        <div className="-rotate-[3.5deg] px-6 pb-5 pt-7">
-          <p className="font-serif text-[13px] leading-relaxed tracking-[0.04em] text-ink/90 md:text-[14px]">
-            Timeless by nature,
-            <br />
-            etched by hand.
-          </p>
-          <div className="mt-4 flex items-center gap-2 text-ink/70">
-            <span className="flex size-9 items-center justify-center rounded-full border border-ink/40">
-              <SunEyeLogo className="size-5" />
-            </span>
-            <FourPointStar className="size-2.5" />
-            <span className="h-px w-10 bg-ink/30" />
-            <span className="w-8 border-t border-dashed border-ink/35" />
-          </div>
-        </div>
-      </div>
-
-      <FourPointStar className="star star-a absolute left-[2%] top-[42%] size-3 text-ink/70" />
+      <Image
+        src="/images/compass.png"
+        alt=""
+        width={22}
+        height={24}
+        className="star star-a absolute left-[2%] top-[42%] w-3.5 h-auto"
+      />
       <FourPointStar className="star star-b absolute right-[36%] top-[8%] size-2.5 text-ink/50" />
       <FourPointStar className="star star-c absolute right-[6%] bottom-[28%] size-2 text-ink/45" />
       <span className="ink-dot absolute left-[48%] top-[10%] size-1 rounded-full bg-ink/50" />

@@ -7,7 +7,7 @@ import { CircularCta } from "./circular-cta";
 import { Header } from "./header";
 import { HeroCollage } from "./hero-collage";
 import { HeroRail } from "./hero-rail";
-import { CrescentMoon, FourPointStar } from "./icons";
+import { FourPointStar, ScrollMouse } from "./icons";
 
 gsap.registerPlugin(useGSAP);
 
@@ -147,7 +147,7 @@ export function Hero() {
       <FourPointStar className="star pointer-events-none absolute left-[22%] top-[22%] z-10 hidden size-2.5 text-ink/40 lg:block" />
       <FourPointStar className="star pointer-events-none absolute bottom-[18%] left-[38%] z-10 hidden size-2 text-ink/35 lg:block" />
 
-      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 py-2 pr-8 pb-8 pl-16 lg:grid-cols-[1fr_1.05fr] lg:gap-12 lg:pt-0 lg:pr-12 lg:pb-10 lg:pl-[4.5rem] xl:gap-16">
+      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 py-2 pr-8 pb-24 pl-16 lg:grid-cols-[1fr_1.05fr] lg:gap-12 lg:pt-0 lg:pr-12 lg:pb-28 lg:pl-[4.5rem] xl:gap-16">
         <div className="hero-copy relative z-20 pt-4 lg:pt-0">
           <div className="hero-eyebrow flex items-center gap-3">
             <p className="hero-kicker">
@@ -186,15 +186,8 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="mt-10 flex items-end gap-8 md:mt-12">
+          <div className="mt-10 md:mt-12">
             <CircularCta />
-            <a
-              href="#destinations"
-              className="scroll-hint mb-3 flex items-center gap-3 font-sans text-[10px] tracking-[0.3em] uppercase text-clay transition-colors hover:text-ink"
-            >
-              Scroll to begin
-              <CrescentMoon className="size-[15px]" />
-            </a>
           </div>
         </div>
 
@@ -202,6 +195,17 @@ export function Hero() {
           <HeroCollage />
         </div>
       </div>
+
+      <a
+        href="#destinations"
+        className="scroll-hint absolute bottom-5 left-16 z-30 flex items-start gap-3 font-sans text-[11px] font-normal tracking-[0.32em] uppercase text-[#4a4238] transition-colors hover:text-ink lg:bottom-6 lg:left-[4.5rem]"
+      >
+        <span>
+          <span className="block">Scroll to begin</span>
+          <span className="mt-1 ml-[2.85rem] block h-9 w-px bg-[#4a4238]" />
+        </span>
+        <ScrollMouse className="mt-px h-[18px] w-[13px] shrink-0 text-clay" />
+      </a>
 
       <ol
         className="section-dots pointer-events-none absolute right-[1.4vw] top-1/2 z-20 hidden -translate-y-1/2 flex-col items-center gap-3 md:flex"
