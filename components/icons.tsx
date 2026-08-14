@@ -107,6 +107,19 @@ export function BotanicalArt({ className }: { className?: string }) {
   );
 }
 
+export function TerracottaDrop({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 180 220"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M108 6C148 14 172 48 174 92c3 52-18 96-54 118-34 22-82 18-108-10C-12 174-6 118 18 74 40 32 72-2 108 6Z" />
+    </svg>
+  );
+}
+
 export function RoughCircleFrame({ className }: { className?: string }) {
   return (
     <svg
