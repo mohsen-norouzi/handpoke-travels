@@ -59,12 +59,22 @@ export const metadata: Metadata = {
     title: "Handpoke Travels",
     description:
       "Ink stories. Mark souls. Handpoke tattoos around the world.",
+    images: [
+      {
+        url: "/share.jpg",
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: "Handpoke Travels — tattoos that travel with you. A handpoke tattoo artist at work.",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Handpoke Travels",
     description:
       "Ink stories. Mark souls. Handpoke tattoos around the world.",
+    images: ["/share.jpg"],
   },
 };
 
