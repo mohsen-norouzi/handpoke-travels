@@ -108,7 +108,7 @@ export function Hero() {
           { sel: ".parallax-slow", ampX: 16, ampY: 10 },
           { sel: ".parallax-med", ampX: 26, ampY: 16 },
           { sel: ".parallax-fast", ampX: 38, ampY: 22 },
-          { sel: ".circle-stage", ampX: 12, ampY: 8 },
+          { sel: ".circle-photo-img", ampX: 18, ampY: 12 },
         ];
 
         const movers = layers.map((layer) => ({

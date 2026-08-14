@@ -22,6 +22,7 @@ export function Header() {
           alt=""
           width={845}
           height={827}
+          loading="eager"
           className="h-12 w-auto object-contain md:h-14"
         />
         <span className="flex flex-col font-serif text-[13px] leading-[1.2] font-medium tracking-[0.4em] uppercase md:text-[15px]">
@@ -57,6 +58,7 @@ export function Header() {
           alt=""
           width={849}
           height={907}
+          loading="eager"
           className="h-4 w-auto object-contain transition-transform duration-500 group-hover:rotate-45"
         />
       </Link>
