@@ -22,10 +22,10 @@ export function HeroCollage() {
         <div className="circle-stamp circle-frame grid size-full rotate-[16deg]">
           <div className="circle-photo col-start-1 row-start-1 mt-[0.5%] ml-[6%] h-[110%] w-[110%] place-self-center overflow-hidden">
             <Image
-              src="/images/hero-tattoo.jpg"
+              src="/images/hero-tattoo.png"
               alt="A handpoke tattoo of a botanical branch being inked onto skin"
-              width={800}
-              height={800}
+              width={1024}
+              height={1024}
               priority
               className="circle-photo-img size-full object-cover object-[center_42%] scale-110"
             />
