@@ -24,7 +24,8 @@ export function Hero() {
         defaults: { ease: "power3.out" },
       });
 
-      tl.from(".nav-brand, .nav-item, .nav-cta", {
+      tl.to(".hero-bg", { opacity: 1, duration: 1.35, ease: "power2.out" }, 0)
+        .from(".nav-brand, .nav-item, .nav-cta", {
         y: -18,
         opacity: 0,
         duration: 0.8,
@@ -119,8 +120,11 @@ export function Hero() {
   return (
     <section
       ref={root}
-      className="hero-root flex h-svh flex-col text-ink"
+      className="hero-root grid h-svh grid-cols-1 grid-rows-1 text-ink"
     >
+      <div className="hero-bg col-start-1 row-start-1 min-h-0" aria-hidden="true" />
+
+      <div className="col-start-1 row-start-1 flex min-h-0 flex-col">
       <Header />
 
       <div className="flex min-h-0 flex-1">
@@ -185,6 +189,7 @@ export function Hero() {
           <li className="size-[7px] rounded-full border border-ink/70" />
           <li className="size-[7px] rounded-full border border-ink/70" />
         </ol>
+      </div>
       </div>
     </section>
   );

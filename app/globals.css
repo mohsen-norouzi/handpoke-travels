@@ -36,10 +36,20 @@ body {
 }
 
 .hero-root {
+  overflow: clip;
+}
+
+.hero-bg {
   background-image: url("/images/bg.png");
   background-size: cover;
   background-position: center;
-  overflow: clip;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    opacity: 1;
+  }
 }
 
 .hero-collage {
