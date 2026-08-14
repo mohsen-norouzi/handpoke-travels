@@ -12,7 +12,7 @@ const NAV = [
 
 export function Header() {
   return (
-    <header className="nav-bar relative z-30 flex flex-wrap items-center justify-between gap-y-3 py-5 pr-[3.5vw] pl-10 lg:pt-7 lg:pl-14">
+    <header className="nav-bar flex flex-wrap items-center justify-between gap-y-3 py-5 pr-8 pl-6 lg:pt-7 lg:pr-10 lg:pl-10">
       <Link
         href="/"
         className="nav-brand flex items-center gap-2.5 text-ink"
@@ -49,9 +49,8 @@ export function Header() {
         href="#book"
         className="nav-cta group flex items-center gap-3 font-serif text-[10px] font-medium tracking-[0.26em] uppercase text-ink md:text-[11px]"
       >
-        <span className="relative">
+        <span className="underline decoration-1 underline-offset-4 transition-colors group-hover:decoration-transparent">
           Book your experience
-          <span className="absolute inset-x-0 -bottom-[3px] h-px origin-left bg-ink transition-transform duration-500 group-hover:scale-x-0" />
         </span>
         <FourPointStar className="size-[11px] transition-transform duration-500 group-hover:rotate-45" />
       </Link>

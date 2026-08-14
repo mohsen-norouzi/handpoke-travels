@@ -6,12 +6,12 @@ export function CircularCta() {
   return (
     <a
       href="#destinations"
-      className="circular-cta group relative flex size-[118px] items-center justify-center text-ink md:size-[132px]"
+      className="circular-cta group grid size-[118px] place-items-center text-ink md:size-[132px]"
       aria-label="Discover the journey"
     >
       <svg
         viewBox="0 0 140 140"
-        className="circular-cta-ring absolute inset-0 size-full origin-center"
+        className="circular-cta-ring col-start-1 row-start-1 size-full origin-center"
         aria-hidden="true"
       >
         <defs>
@@ -36,7 +36,7 @@ export function CircularCta() {
         alt=""
         width={28}
         height={27}
-        className="size-5 object-contain transition-transform duration-700 group-hover:rotate-45 md:size-6"
+        className="col-start-1 row-start-1 size-5 object-contain transition-transform duration-700 group-hover:rotate-45 md:size-6"
       />
     </a>
   );

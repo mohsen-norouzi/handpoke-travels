@@ -3,7 +3,7 @@ import Image from "next/image";
 export function HeroRail() {
   return (
     <aside
-      className="hero-rail pointer-events-none absolute top-1/2 left-[14px] z-20 flex h-[min(56vh,520px)] w-5 -translate-y-1/2 flex-col items-center md:left-[20px] lg:left-[26px]"
+      className="hero-rail hidden h-[min(56vh,520px)] w-8 shrink-0 flex-col items-center self-center md:flex lg:w-10"
       aria-hidden="true"
     >
       <span className="rail-top origin-top block w-px flex-[0.34]" />

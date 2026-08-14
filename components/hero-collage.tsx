@@ -1,69 +1,69 @@
 import Image from "next/image";
-import { FourPointStar, RoughCircleFrame } from "./icons";
+import { RoughCircleFrame } from "./icons";
 
 export function HeroCollage() {
   return (
-    <div className="hero-collage relative mx-auto h-[min(78vh,720px)] w-full max-w-[720px] lg:mx-0 lg:h-full lg:max-w-none">
-      <div className="watercolor watercolor-a" />
-      <div className="watercolor watercolor-b" />
+    <div className="hero-collage grid h-full min-h-0 w-full grid-cols-1 grid-rows-1">
+      <div className="terracotta parallax-med pointer-events-none col-start-1 row-start-1 ml-[6%] mt-[10%] size-[22%] rounded-full bg-terracotta" />
 
-      <div className="terracotta parallax-med pointer-events-none absolute left-[4%] top-[8%] z-0 size-[28%] rounded-full bg-terracotta md:left-[6%] md:top-[10%] md:size-[210px] lg:left-[5%] lg:size-[23%]" />
-
-      <div className="circle-stage absolute left-[6%] top-[12%] z-10 aspect-square w-[72%] md:left-[8%] md:w-[68%] lg:w-[62%]">
-        <div className="circle-photo relative size-full overflow-hidden rounded-full">
-          <Image
-            src="/images/hero-tattoo.jpg"
-            alt="A handpoke tattoo of a botanical branch being inked onto skin"
-            fill
-            priority
-            sizes="(max-width: 1024px) 70vw, 42vw"
-            className="circle-photo-img object-cover object-[center_42%] scale-110"
-          />
+      <div className="circle-stage col-start-1 row-start-1 ml-[8%] mt-[12%] aspect-square w-[min(62%,72cqh)] min-h-0">
+        <div className="grid size-full">
+          <div className="circle-photo col-start-1 row-start-1 overflow-hidden rounded-full">
+            <Image
+              src="/images/hero-tattoo.jpg"
+              alt="A handpoke tattoo of a botanical branch being inked onto skin"
+              width={800}
+              height={800}
+              priority
+              className="circle-photo-img size-full object-cover object-[center_42%] scale-110"
+            />
+          </div>
+          <RoughCircleFrame className="circle-frame pointer-events-none col-start-1 row-start-1 -m-[3%] size-[106%] text-ink" />
         </div>
-        <RoughCircleFrame className="circle-frame pointer-events-none absolute -inset-[3.2%] text-ink" />
       </div>
 
-      <div className="parallax-slow pointer-events-none absolute right-[-4%] top-[2%] z-[5] w-[42%] md:right-[-1%] md:top-[0%] md:w-[230px] lg:w-[32%]">
+      <div className="parallax-slow pointer-events-none col-start-1 row-start-1 -mr-2 ml-auto h-full min-h-0 w-[34%]">
         <Image
           src="/images/flower.png"
           alt=""
           width={565}
           height={1627}
-          className="h-auto w-full brightness-0 opacity-55"
+          className="h-full w-full object-contain object-top-right brightness-0 opacity-55"
         />
       </div>
 
-      <div className="polaroid parallax-fast absolute right-[2%] top-[14%] z-20 w-[40%] max-w-[230px] md:right-[5%] md:top-[16%] md:w-[220px] lg:right-[6%]">
-        <div className="relative aspect-[906/1268] rotate-[5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]">
-          <div className="absolute inset-[10%_6.2%_8.8%_5.6%] overflow-hidden bg-[#cbb9a4]">
+      <div className="polaroid parallax-fast col-start-1 row-start-1 mr-[4%] ml-auto mt-[14%] w-[min(38%,42cqh)] max-w-[220px] min-h-0">
+        <div className="grid rotate-[5deg] drop-shadow-[0_16px_28px_rgba(40,24,10,0.18)]">
+          <div className="col-start-1 row-start-1 px-[6%] pt-[10%] pb-[9%]">
             <Image
               src="/images/hero-landscape.jpg"
               alt="Misty mountain range in warm vintage tones"
-              fill
-              sizes="230px"
-              className="object-cover"
+              width={600}
+              height={800}
+              priority
+              className="h-full w-full object-cover"
             />
           </div>
           <Image
             src="/images/frame.png"
             alt=""
-            fill
-            sizes="230px"
-            className="pointer-events-none object-contain"
+            width={906}
+            height={1268}
+            className="pointer-events-none col-start-1 row-start-1 h-auto w-full"
           />
         </div>
       </div>
 
-      <div className="torn-note parallax-fast absolute bottom-[4%] left-[12%] z-20 w-[54%] max-w-[300px] md:left-[16%] md:w-[280px]">
-        <div className="relative -rotate-[3.5deg]">
+      <div className="torn-note parallax-fast col-start-1 row-start-1 mb-[4%] ml-[12%] mt-auto w-[min(52%,50cqh)] max-w-[280px] min-h-0">
+        <div className="grid -rotate-[3.5deg]">
           <Image
             src="/images/paper.png"
             alt=""
             width={962}
             height={1163}
-            className="h-auto w-full drop-shadow-[0_12px_20px_rgba(40,24,10,0.12)]"
+            className="col-start-1 row-start-1 h-auto w-full drop-shadow-[0_12px_20px_rgba(40,24,10,0.12)]"
           />
-          <div className="absolute inset-[22%_16%_18%_20%] flex flex-col">
+          <div className="col-start-1 row-start-1 flex flex-col p-[22%_16%_18%_20%]">
             <p className="font-sans text-[11px] leading-relaxed tracking-[0.14em] text-ink/85 uppercase md:text-[12px]">
               Timeless by nature.
               <br />
@@ -74,24 +74,11 @@ export function HeroCollage() {
               alt="Handpoke Travels stamp"
               width={1137}
               height={695}
-              className="mt-auto w-[88%] h-auto"
+              className="mt-auto h-auto w-[88%]"
             />
           </div>
         </div>
       </div>
-
-      <Image
-        src="/images/compass.png"
-        alt=""
-        width={22}
-        height={24}
-        className="star star-a absolute left-[2%] top-[42%] w-3.5 h-auto"
-      />
-      <FourPointStar className="star star-b absolute right-[36%] top-[8%] size-2.5 text-ink/50" />
-      <FourPointStar className="star star-c absolute right-[6%] bottom-[28%] size-2 text-ink/45" />
-      <span className="ink-dot absolute left-[48%] top-[10%] size-1 rounded-full bg-ink/50" />
-      <span className="ink-dot absolute right-[28%] bottom-[18%] size-[3px] rounded-full bg-ink/40" />
-      <span className="ink-dot absolute bottom-[22%] left-[8%] size-[2px] rounded-full bg-ink/35" />
     </div>
   );
 }
