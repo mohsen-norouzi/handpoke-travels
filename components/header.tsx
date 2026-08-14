@@ -14,7 +14,7 @@ export function Header() {
     <header className="nav-bar flex flex-wrap items-center justify-between gap-y-3 py-5 pr-8 pl-6 lg:pt-7 lg:pr-10 lg:pl-10">
       <Link
         href="/"
-        className="nav-brand flex items-center gap-2.5 text-ink"
+        className="nav-brand flex items-center gap-3 text-ink"
         aria-label="Handpoke Travels home"
       >
         <Image
@@ -24,8 +24,9 @@ export function Header() {
           height={827}
           className="h-12 w-auto object-contain md:h-14"
         />
-        <span className="font-serif text-[11px] font-medium tracking-[0.34em] uppercase">
-          Handpoke Travels
+        <span className="flex flex-col font-serif text-[13px] leading-[1.2] font-medium tracking-[0.4em] uppercase md:text-[15px]">
+          <span>Handpoke</span>
+          <span>Travels</span>
         </span>
       </Link>
 
