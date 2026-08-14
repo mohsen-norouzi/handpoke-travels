@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { CircularCta } from "./circular-cta";
 import { Header } from "./header";
 import { HeroCollage } from "./hero-collage";
+import { HeroRail } from "./hero-rail";
 import { CrescentMoon, FourPointStar } from "./icons";
 
 gsap.registerPlugin(useGSAP);
@@ -65,6 +66,16 @@ export function Hero() {
           ".circular-cta, .scroll-hint, .section-dots",
           { opacity: 0, y: 16, duration: 0.7, stagger: 0.08 },
           "-=0.6",
+        )
+        .from(
+          ".rail-top, .rail-mid",
+          { scaleY: 0, duration: 1.05, stagger: 0.08, ease: "power2.inOut" },
+          0.2,
+        )
+        .from(
+          ".rail-dot, .rail-star",
+          { scale: 0, opacity: 0, duration: 0.4, stagger: 0.14, ease: "back.out(1.8)" },
+          0.7,
         );
 
       gsap.to(".circular-cta-ring", {
@@ -131,11 +142,12 @@ export function Hero() {
       <div className="hero-paper" aria-hidden="true" />
 
       <Header />
+      <HeroRail />
 
       <FourPointStar className="star pointer-events-none absolute left-[22%] top-[22%] z-10 hidden size-2.5 text-ink/40 lg:block" />
       <FourPointStar className="star pointer-events-none absolute bottom-[18%] left-[38%] z-10 hidden size-2 text-ink/35 lg:block" />
 
-      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 px-[4vw] pb-8 pt-2 lg:grid-cols-[minmax(280px,0.88fr)_1.22fr] lg:gap-0 lg:px-[3.5vw] lg:pb-10 lg:pt-0">
+      <div className="relative z-10 grid flex-1 grid-cols-1 items-center gap-8 py-2 pr-[4vw] pb-8 pl-10 lg:grid-cols-[minmax(280px,0.88fr)_1.22fr] lg:gap-0 lg:pt-0 lg:pr-[3.5vw] lg:pb-10 lg:pl-14">
         <div className="hero-copy relative z-20 max-w-[580px] pt-4 lg:pt-0">
           <p className="hero-eyebrow flex items-center gap-2.5 font-serif text-[11px] tracking-[0.32em] uppercase text-ink/75">
             Ink stories. Mark souls.

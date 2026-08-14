@@ -44,6 +44,14 @@ body {
   pointer-events: none;
 }
 
+.rail-top {
+  background: linear-gradient(to bottom, transparent, #1c1612 45%, #1c1612);
+}
+
+.rail-mid {
+  background: #1c1612;
+}
+
 .watercolor {
   position: absolute;
   border-radius: 50%;

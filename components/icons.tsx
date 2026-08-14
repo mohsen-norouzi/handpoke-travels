@@ -11,6 +11,34 @@ export function FourPointStar({ className }: { className?: string }) {
   );
 }
 
+export function SparkleStar({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M12 0 L15.54 8.46 24 12 15.54 15.54 12 24 8.46 15.54 0 12 8.46 8.46Z" />
+    </svg>
+  );
+}
+
+const SUN_RAYS = [
+  { x1: "20", y1: "10.8", x2: "20", y2: "3.6" },
+  { x1: "24.6", y1: "12.03", x2: "27.1", y2: "7.7" },
+  { x1: "27.97", y1: "15.4", x2: "34.2", y2: "11.8" },
+  { x1: "29.2", y1: "20", x2: "34.2", y2: "20" },
+  { x1: "27.97", y1: "24.6", x2: "34.2", y2: "28.2" },
+  { x1: "24.6", y1: "27.97", x2: "27.1", y2: "32.3" },
+  { x1: "20", y1: "29.2", x2: "20", y2: "36.4" },
+  { x1: "15.4", y1: "27.97", x2: "12.9", y2: "32.3" },
+  { x1: "12.03", y1: "24.6", x2: "5.8", y2: "28.2" },
+  { x1: "10.8", y1: "20", x2: "5.8", y2: "20" },
+  { x1: "12.03", y1: "15.4", x2: "5.8", y2: "11.8" },
+  { x1: "15.4", y1: "12.03", x2: "12.9", y2: "7.7" },
+] as const;
+
 export function SunEyeLogo({ className }: { className?: string }) {
   return (
     <svg
@@ -24,20 +52,9 @@ export function SunEyeLogo({ className }: { className?: string }) {
       <circle cx="20" cy="20" r="6.2" />
       <ellipse cx="20" cy="20" rx="3.1" ry="1.7" />
       <circle cx="20" cy="20" r="0.9" fill="currentColor" stroke="none" />
-      {Array.from({ length: 12 }, (_, i) => {
-        const a = (i / 12) * Math.PI * 2 - Math.PI / 2;
-        const inner = 9.2;
-        const outer = i % 2 === 0 ? 16.4 : 14.2;
-        return (
-          <line
-            key={i}
-            x1={20 + Math.cos(a) * inner}
-            y1={20 + Math.sin(a) * inner}
-            x2={20 + Math.cos(a) * outer}
-            y2={20 + Math.sin(a) * outer}
-          />
-        );
-      })}
+      {SUN_RAYS.map((ray) => (
+        <line key={`${ray.x1}-${ray.y1}`} {...ray} />
+      ))}
     </svg>
   );
 }

@@ -11,7 +11,7 @@ const NAV = [
 
 export function Header() {
   return (
-    <header className="nav-bar relative z-30 flex flex-wrap items-center justify-between gap-y-3 px-[3.5vw] pt-5 pb-2 lg:pt-7">
+    <header className="nav-bar relative z-30 flex flex-wrap items-center justify-between gap-y-3 py-5 pr-[3.5vw] pl-10 lg:pt-7 lg:pl-14">
       <Link
         href="/"
         className="nav-brand flex items-center gap-2.5 text-ink"
