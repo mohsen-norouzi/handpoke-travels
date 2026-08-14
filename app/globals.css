@@ -1,26 +1,141 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #e6d4c3;
+  --foreground: #1c1612;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #e6d4c3;
+  --color-ink: #1c1612;
+  --color-terracotta: #c45c3a;
+  --color-paper: #d9c4aa;
+  --font-sans: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+  --font-display: var(--font-bodoni), ui-serif, Georgia, serif;
+  --font-script: var(--font-great-vibes), cursive;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--font-serif);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-terracotta) 28%, transparent);
+  color: var(--foreground);
+}
+
+.hero-paper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+}
+
+.watercolor {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(42px);
+}
+
+.watercolor-a {
+  top: 14%;
+  right: 10%;
+  width: min(34%, 280px);
+  height: min(28%, 200px);
+  background: #d4b093;
+  opacity: 0.32;
+}
+
+.watercolor-b {
+  bottom: 10%;
+  left: 6%;
+  width: min(30%, 220px);
+  height: min(24%, 170px);
+  background: #c9a07e;
+  opacity: 0.2;
+}
+
+.tape {
+  position: absolute;
+  top: -11px;
+  z-index: 2;
+  height: 22px;
+  width: 58px;
+  background: rgba(214, 190, 150, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.tape-left {
+  left: 14px;
+  transform: rotate(-8deg);
+}
+
+.tape-right {
+  right: 16px;
+  transform: rotate(6deg);
+}
+
+.torn-note {
+  background: #dcc9b0;
+  filter: drop-shadow(0 12px 20px rgba(40, 24, 10, 0.12));
+  clip-path: polygon(
+    1% 4%,
+    5% 1%,
+    10% 5%,
+    16% 0%,
+    22% 4%,
+    29% 1%,
+    36% 5%,
+    44% 0%,
+    52% 4%,
+    60% 1%,
+    68% 5%,
+    76% 0%,
+    84% 4%,
+    92% 1%,
+    97% 5%,
+    100% 2%,
+    99% 18%,
+    100% 36%,
+    98% 54%,
+    100% 72%,
+    98% 88%,
+    100% 97%,
+    94% 100%,
+    86% 97%,
+    78% 100%,
+    70% 96%,
+    62% 100%,
+    54% 97%,
+    46% 100%,
+    38% 96%,
+    30% 100%,
+    22% 97%,
+    14% 100%,
+    6% 97%,
+    0% 100%,
+    1% 82%,
+    0% 64%,
+    2% 46%,
+    0% 28%,
+    2% 12%
+  );
+}
+
+.circle-photo {
+  box-shadow: inset 0 0 40px rgba(20, 12, 6, 0.28);
 }
